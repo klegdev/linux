@@ -42,3 +42,4 @@ cat task1/selected.txt task1/commands.txt
   428  grep -n "/bin" task1/processes.txt >> task1/selected.txt 
   429  history
   430  history | tail -n +420 > task1/commands.txt
+
