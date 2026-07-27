@@ -1,0 +1,44 @@
+cat task1/selected.txt task1/commands.txt
+241
+89:root        1471  0.0  0.0   2888  2008 ?        Ss   04:06   0:00 /bin/sh /usr/lib/systemd/scripts/chronyd-starter.sh -n -F 1
+91:root        1480  0.0  0.6  58472 30100 ?        Ss   04:06   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+106:root        1753  0.0  0.6 137744 32812 ?        Ssl  04:06   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+108:root        8301  0.1  0.0 350152  2548 ?        Sl   04:06   1:05 /usr/bin/VBoxDRMClient
+118:klegutko    9574  0.0  0.1  10656  8088 ?        Ss   04:21   0:10 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+119:klegutko    9575  0.0  0.2 121200 12952 ?        S<sl 04:21   0:08 /usr/bin/pipewire
+120:klegutko    9581  0.0  0.2 194488 11208 ?        SLsl 04:21   0:00 /usr/bin/gnome-keyring-daemon --foreground --components=pkcs11,secrets --control-directory=/run/user/1000/keyring
+121:klegutko    9585  0.0  0.0   7560  4068 ?        Ss   04:21   0:00 /usr/bin/mpris-proxy
+122:klegutko    9594  0.0  0.4 498996 22672 ?        S<sl 04:21   0:04 /usr/bin/wireplumber
+123:klegutko    9596  0.0  0.1  96096  5736 ?        Ssl  04:21   0:00 /usr/bin/pipewire -c filter-chain.conf
+124:klegutko    9598  0.0  0.2 189996 12684 ?        S<sl 04:21   0:01 /usr/bin/pipewire-pulse
+126:klegutko    9677  0.0  0.1 179480  6868 tty2     Ssl+ 04:21   0:00 /usr/libexec/gdm-wayland-session /usr/bin/gnome-session --session=ubuntu
+132:klegutko    9892  0.0  0.1  10484  6736 ?        Ss   04:21   0:00 /usr/bin/ssh-agent -D
+136:klegutko   10135  0.9 10.8 5229636 518436 ?      Ssl  04:21   8:46 /usr/bin/gnome-shell --mode=ubuntu
+138:klegutko   10180  0.0  0.1   8740  5288 ?        S    04:21   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/run/user/1000/at-spi/bus
+143:klegutko   10222  0.0  0.6 2673072 33212 ?       Sl   04:21   0:00 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.Shell.Notifications
+144:klegutko   10232  0.0  0.2 396860 11952 ?        Ssl  04:21   0:19 /usr/bin/ibus-daemon --panel disable
+160:klegutko   10285  0.0  0.7 654804 35696 ?        Sl   04:21   0:02 /usr/bin/update-notifier
+163:klegutko   10362  0.0  1.4 212356 70876 ?        S    04:21   0:00 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.Q4X9S3 -listenfd 4 -listenfd 5 -displayfd 6 -initfd 7 -byteswappedclients -enable-ei-portal
+165:klegutko   10445  0.0  0.6 2754968 32944 ?       Sl   04:21   0:00 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.ScreenSaver
+182:klegutko   10703  0.0  0.3  47748 14608 ?        Ss   04:21   0:00 /snap/snapd-desktop-integration/361/usr/bin/snapd-desktop-integration
+183:klegutko   10769  0.0  0.6 518868 31156 ?        Sl   04:21   0:00 /snap/snapd-desktop-integration/361/usr/bin/snapd-desktop-integration
+187:klegutko   10911  0.0  0.0  28148  1736 ?        S    04:21   0:00 /usr/bin/VBoxClient --clipboard
+188:klegutko   10912  0.0  0.0 226968  4664 ?        Sl   04:21   0:00 /usr/bin/VBoxClient --clipboard
+189:klegutko   10970  0.0  0.0  28148  1748 ?        S    04:21   0:00 /usr/bin/VBoxClient --vmsvga-session
+190:klegutko   10971  0.0  0.0 162852  3748 ?        Sl   04:21   0:13 /usr/bin/VBoxClient --vmsvga-session
+196:klegutko   14529  0.0  0.5 1950740 28056 ?       Sl   05:04   0:06 /usr/bin/snap userd
+197:klegutko   16752  0.3  8.9 2958276 429616 ?      Sl   05:22   3:06 /usr/bin/ptyxis --gapplication-service
+199:klegutko   16798  0.0  0.1  20468  6520 pts/0    Ss   05:22   0:01 /usr/bin/bash
+207:klegutko   20952  0.0  0.7  56092 33900 ?        S    10:32   0:00 python3 /usr/bin/wsdd --no-host --discovery --listen /run/user/1000/gvfsd/wsdd
+218:klegutko   26418  0.0  0.1  19976  5740 pts/1    Ss+  16:50   0:00 /usr/bin/bash
+  420  mkdir task1
+  421  touch task1/processes.txt
+  422  ps aux > task1/processes.txt
+  423  cp task1/processes.txt task1/copy.txt
+  424  mkdir task1/backup
+  425  mv task1/copy.txt task1/backup/
+  426  wc -l task1/processes.txt 
+  427  wc -l < task1/processes.txt > task1/selected.txt
+  428  grep -n "/bin" task1/processes.txt >> task1/selected.txt 
+  429  history
+  430  history | tail -n +420 > task1/commands.txt
